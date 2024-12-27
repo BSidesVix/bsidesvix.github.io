@@ -1,1 +1,1276 @@
-Hello world!
+<?php
+    require_once(__DIR__."/method/print_galeria.php");
+    require_once(__DIR__."/storage/index.php");
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta property="og:image" content="https://bsides.vix.br//img/Logo/Logo.png">
+    <meta name="description"
+        content="A Maior Conferência Sobre Segurança da Informação e Cultura Hacker do Espírito Santo">
+    <meta name="keywords"
+        content="Hacker, Hacker do Espírito Santo, Segurança, Palestrantes, Palestra, segmento de cyber security, cultura hacker">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="cache-control" content="cache">
+    <meta http-equiv="expires" content="50000000">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>BSides - Vitória</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./slick/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/style.css?v=2">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./font/fontawesome-5.15.1/css/all.css">
+    <link rel="shortcut icon" href="./img/Logo/Logo.svg" type="image/x-icon">
+    <meta rel="icon" type="image/png" href="./img/Logo/Logo.png">
+</head>
+
+<body>
+    <header id="top">
+        <div class="content">
+            <div class="container_mobile">
+                <div class="box_logo">
+                    <div class="inner_logo">
+                        <a class="nav-link" href="/" rel="noreferrer">
+                            <div class="logo"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="box_bars">
+                    <div class="bars">
+                        <span class="fa fa-bars"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container_menu">
+               
+            <!-- Isso eu faço amanha
+                <script>
+                    function retornaStringDinamica() {
+                        return "T0Z2cXJmSXZre3NieXliaiBndXIganV2Z3IgZW5vb3ZnICF9Cg==";
+                    }
+                // BSidesVix{Never argue with the data.}
+                </script>
+            -->
+
+                <div class="box_logo">
+                    <div class="inner_logo">
+                        <a class="nav-link" href="/" rel="noreferrer">
+                            <div class="logo"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="box_menu">
+                    <nav>
+                        <ul>
+                            <!-- <li>
+                                <a class="nav-link" href="#home" rel="noreferrer"> HOME </a>
+                            </li> -->
+                            <!-- <li>
+                                <a class="nav-link" href="#evento" rel="noreferrer"> EVENTO </a>
+                            </li> -->
+                            <!--                             <li>
+                                <a class="nav-link" href="#programacao" rel="noreferrer">PROGRAMAÇÃO</a>
+                            </li> -->
+                            <!-- <li>
+                                <a class="nav-link" href="#palestra" rel="noreferrer"">PALESTRANTES E VOLUNTÁRIOS</a>
+                            </li> -->
+                            <!-- <li>
+                                <a class=" nav-link" href="#fotos" rel="noreferrer">FOTOS</a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="banner_info banner_info_desk">
+            <div class="box_banner_info">
+                <div class="banner_center">
+
+                    <div class="img_banner_info" style="display:none;">
+                        <span >Nosso evento está chegando, faltam:</span>
+                        <div class="contaner_count">
+                            <div class="box_count">
+                                <div class="count_info">
+                                    <span class="days">00</span>
+                                    <span>Dias</span>
+                                </div>
+                                <div class="count_info">
+                                    <span class="hours">00</span>
+                                    <span>Horas</span>
+                                </div>
+                                <div class="count_info">
+                                    <span class="minutes">00</span>
+                                    <span>Minutos</span>
+                                </div>
+                                <div class="count_info">
+                                    <span class="seconds">00</span>
+                                    <span>Segundos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner_andress">
+                        <p>
+                            <strong class="week">Sábado 07/Junho/2025</strong>
+                            <strong class="andress">Local: EEFM Prof. Renato Jose da Costa Pacheco</strong>
+                            <a href="https://goo.gl/maps/A9LzhUeD2MKLmjss6" target="_blank">
+                                <p class="andress02">Jardim Camburi - Vitória-ES</p>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="ilustre_img">
+                    <div class="img"></div>
+                </div>
+            </div>
+        </div>
+        <div class="box_desc mobile_desc" style="display: none;">
+            <div class="desc">
+                <span>Palestrantes</span>
+                <p>
+                    A BSides conta com um time de palestrantes com ampla experiência no segmento de cyber security e
+                    cultura hacker:
+                </p>
+            </div>
+        </div>
+        <div class="mask">
+            <div class="box_desc">
+                <div class="desc">
+                    <span>Palestrantes</span>
+                    <p>
+                        A BSides conta com um time de palestrantes com ampla experiência no segmento de cyber
+                        security e
+                        cultura hacker:
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container_banner">
+                <div class="box_banner">
+                    <div class="inner_ info">
+                        <h1>
+                            <strong class="strong01"> 5ª edição da maior conferência</strong> Sobre Segurança
+                            da Informação e Cultura Hacker do
+                            <span class="span01">Espírito</span> <span class="span02">Santo</span>
+                        </h1>
+                        <p>
+                            A BSides Vitória é uma conferência <strong class="strong02">gratuita</strong> sobre
+                            Segurança da Informação, Cultura Hacker e Tecnologia. Fazemos parte da <strong
+                                class="strong03">Security BSides</strong> que está em mais de 65 países.
+                        </p>
+                        <div class="button_banner" style="display: none;">
+                            <a href="https://www.sympla.com.br/evento/security-bsides-vitoria-2024/2343919"
+                                class="btn_banner" target="_blank">INSCREVA-SE AGORA</a>
+                            <div class="qrcode" title="Ler com seu celular"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner_info banner_info_mobile">
+                <div class="box_banner_info">
+                    <div class="banner_center">
+                        <span style="display:none;">Nosso evento está chegando, faltam:</span>
+                        <div class="img_banner_info" style="display:none;">
+                            <div class="contaner_count">
+                                <div class="box_count">
+                                    <div class="count_info">
+                                        <span class="days">00</span>
+                                        <span>Dias</span>
+                                    </div>
+                                    <div class="count_info">
+                                        <span class="hours">00</span>
+                                        <span>Horas</span>
+                                    </div>
+                                    <div class="count_info">
+                                        <span class="minutes">00</span>
+                                        <span>Minutos</span>
+                                    </div>
+                                    <div class="count_info">
+                                        <span class="seconds">00</span>
+                                        <span>Segundos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_andress">
+                            <p>
+                                <strong class="week">Sábado 07/Junho/2025</strong>
+                                <strong class="andress">Local: EEEM Prof. Renato José da Costa Pacheco
+                                    (Vitória/ES)</strong>
+                                <a href="https://goo.gl/maps/A9LzhUeD2MKLmjss6" target="_blank">
+                                    <p class="andress02">Jardim Camburi - Vitória-ES</p>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ilustre_img">
+                        <div class="img"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" style="display: none;">
+        <div class="info_box" id="evento">
+            <div class="title">
+                <h2>A Security BSides Vitória</h2>
+            </div>
+            <div class="content">
+                <div class="inner_info_content content_section">
+                    <p>
+                        A BSides chegou na América Latina, o primeiro estado a promover foi São Paulo em 2012 e
+                        desde
+                        então já foram realizadas 15 edições.
+                    </p>
+                </div>
+                <div class="time">
+                    <div class="row_inner">
+                        <div class="row_time">
+                            <div class="row_progression">
+                                <div class="progression">
+                                    <div class="set_"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="score_number">
+                            <div class="inner_number_container">
+                                <div class="inner_number">
+                                    <span class="down">São Paulo</span>
+                                    <div class="number" data-id="1">2012</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="up">São Paulo</span>
+                                    <div class="number" data-id="2">2013</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="down">São Paulo</span>
+                                    <div class="number" data-id="3">2014</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="up">São Paulo</span>
+                                    <div class="number" data-id="4">2015</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="down">São Paulo</span>
+                                    <div class="number" data-id="5">2016</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="up">São Paulo</span>
+                                    <div class="number" data-id="6">2017</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="down">São Paulo</span>
+                                    <div class="number" data-id="7">2018</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="persion_up"><strong class="city">Vitória</strong> São Paulo</span>
+                                    <div class="number circloPink" data-id="8">2019</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="down">Pandemia</span>
+                                    <div class="number" data-id="9">2020</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="up">Pandemia</span>
+                                    <div class="number circloGray workBrack" data-id="10">2021</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="persion_down"><strong class="city">Vitória</strong> São
+                                        Paulo</span>
+                                    <div class="number circloGray workBrack" data-id="11">2022</div>
+                                </div>
+                                <div class="inner_number">
+                                    <span class="persion_up"><strong class="city">Vitória</strong> São Paulo</span>
+                                    <div class="number circloGray workBrack" data-id="12">2023</div>
+                                </div>
+                                <div class="inner_number">
+                                    <!--  <span class="persion_up"><strong class="city">Vitória</strong> São Paulo</span> -->
+                                    <div class="number  circloBlack" data-id="12">2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner_info_content content_section">
+                    <p>
+                        A BSides Vitória, segunda conferência no território brasileiro teve sua primeira edição em
+                        2019.<br><br>
+
+                        Desde o início a BSides Vitória, que leva este nome por incluir toda a Grande Vitória, foi
+                        inspirada no modelo das conferências “Security BSides” existentes em vários países. A
+                        conferência tem um formato único no Brasil - muito bem sucedido aqui e em várias geografias
+                        do
+                        mundo - aliando a troca de informações com uma oportunidade única de networking.<br><br>
+
+                        A BSides Vitória é um evento totalmente gratuito e faz parte do circuito global de
+                        conferências
+                        Security BSides.
+                    </p>
+                </div>
+            </div>
+            <div class="inner_info02">
+                <div class="title" id="programacao">
+                    <h2>
+                        A Security BSides <span class="colorTitle">Vitória 2022
+                        </span> - Programação dia 06 de Maio
+                    </h2>
+                    <div class="button_banner">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1IMthyjyM0wUyvARS2W0l2JIatKRyR1ZK0_APjk6qOmX1Sw/viewform"
+                            class="btn_banner">INSCREVA-SE AGORA</a>
+                    </div>
+                </div>
+                <div class="destaque content_section">
+                    <p>A programação principal terá os seguintes destaques:</p><br>
+                </div>
+                <div class="info_box02">
+                    <div class="title">
+                        <span>Trilha Padawan:</span>
+                    </div>
+                    <div class="inner_info">
+                        <p>
+                            palestras com conteúdo básico direcionado para estudantes e iniciantes na carreira de
+                            <span class="text">Segurança da Informação e Tecnologia da Informação;</span>
+                        </p>
+                    </div>
+                </div> <br><br>
+                <div class="info_box02">
+                    <div class="title">
+                        <span> Trilha Jedi:</span>
+                    </div>
+                    <div class="inner_info">
+                        <p>
+                            palestras com conteúdo avançado direcionado para profissionais com
+                            <span class="text">
+                                experiência nas áreas de Segurança da Informação e Tecnologia da
+                                Informação;</span>
+                        </p>
+                    </div>
+                </div> <br><br>
+                <div class="info_box02">
+                    <div class="title">
+                        <span>CTF – Capture the flag:</span>
+                    </div>
+                    <div class="inner_info">
+                        <p>
+
+                            competição onde os participantes são desafiados a resolver <span class="text">problemas
+                                relativos a Segurança da Informação, arquitetura de computadores, criptografia e
+                                programação;</span>
+                        </p>
+                    </div>
+                </div> <br><br>
+                <div class="info_box02">
+                    <div class="title">
+                        <span>Campeonato de Robótica:</span>
+                    </div>
+                    <div class="inner_info">
+                        <p>
+                            competição de equipes em duas categorias: Lego e Hardware livre.
+                        </p>
+                    </div>
+                </div> <br><br>
+            </div>
+            <div class="button_banner center__">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1IMthyjyM0wUyvARS2W0l2JIatKRyR1ZK0_APjk6qOmX1Sw/viewform"
+                    class="btn_banner">INSCREVA-SE AGORA</a>
+            </div>
+        </div>
+    </section>
+    <section class="about" style="display: none;">
+        <div class="content">
+            <!-- Ano 2024 -->
+            <div class="container_about carousel04">
+            </div>
+            <div class="palestra_hora">
+                <section class="palestra horario">
+                    <div class="container_palestra">
+                        <div class="box_palestrar" id="table-correusel">
+                            <div class="table-content-horario">
+                                <div class="inner">
+                                    <div class="info">
+                                        <div class="title" id="palestra">
+                                            <h2>Programação - 2024</h2>
+                                        </div>
+
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-striped table-horario table-bordered">
+                                                <thead class="table-color-header-horario">
+                                                    <tr>
+                                                        <th scope="col">Horario</th>
+                                                        <th scope="col">Trilha JEDI</th>
+                                                        <th scope="col">Trilha PADAWAN</th>
+                                                        <th scope="col">Trilha IA</th>
+                                                        <th scope="col">Workshop</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">08:30</td>
+                                                        <td colspan="4">
+                                                            <span class="d-block dark_horario">Credenciamento</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">09:30 às 10:00</td>
+                                                        <td colspan="4"><span
+                                                                class="d-block dark_horario">Abertura</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">10:00 às 11:00</td>
+                                                        <td colspan="4">
+                                                            <span class="d-block dark_horario">
+                                                                Hackeando MESMO o sistema: como estudar computação
+                                                            </span>
+                                                            <span class="d-block">Fernando Mercês</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">11:00 às 12:00</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">Ataques DDoS volumétricos
+                                                                e respostas</span>
+                                                            <span class="d-block dark_horario">automatizadas a
+                                                                incidentes</span>
+                                                            <span class="d-block">Eduardo Bragatto</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">Ciberataques na Gestão
+                                                                Pública - Os</span>
+                                                            <span class="d-block dark_horario">ransonwares estão ai, as
+                                                                políticas de segurança</span>
+                                                            <span class="d-block dark_horario">não.</span>
+                                                            <span class="d-block">Sérgio Maia Rabelo</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Ferramentas de IA em apoio ao desenvolvedor
+                                                            </span>
+                                                            <span class="d-block">André Bessa da Silva</span>
+                                                        </td>
+                                                        <td colspan="0"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12:00 às 13:30</td>
+                                                        <td colspan="4">
+                                                            <span>Almoço</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13:30 às 14:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Explorando o Dark Casino - CVE-2024-21412
+                                                            </span>
+                                                            <span class="d-block">Thiago Cunha da Silva</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                DeepWeb, Darkweb e DarkNet
+                                                            </span>
+                                                            <span class="d-block">Alexandre Dimas Santos Reis</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="d-block dark_horario">Impactos da IA na
+                                                                Segurança e Privacidade</span>
+                                                            <span class="d-block dark_horario">da Sociedade
+                                                                Contemporânea</span>
+                                                            <span class="d-block">Otávio Lube dos Santos</span>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14:30 às 15:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Explorando Vulnerabilidades em
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                SmartContracts
+                                                            </span>
+                                                            <span class="d-block">Maycon Maia Vitali</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                It's Not a Feature, It's a Bug!
+                                                            </span>
+                                                            <span class="d-block">Alcyon Junior</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Requisitos de auditoria para o tratamento de
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                dados pessoais relacionados com IA
+                                                            </span>
+                                                            <span class="d-block">Fernanda Modolo Vieira Machado</span>
+                                                        </td>
+                                                        <td rowspan="3" class="align-middle">
+                                                            <span class="d-block dark_horario">
+                                                                Exploração e
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                Correção de
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                vulnerabilidades
+                                                            </span>
+                                                            <span class="d-block">Fernando Henrique Mengali de
+                                                                Souza</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15:30 às 16:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Explorando Frida: Um Guia Prático Passo a
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                Passo em Segurança Android
+                                                            </span>
+                                                            <span class="d-block">Thiago Peixoto + Daiane Santos</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Usando OSINT para mapear padrões de
+                                                            </span>
+                                                            <span class="d-block dark_horario">comportamentos em redes
+                                                                sociais</span>
+                                                            <span class="d-block">Deivison Henrique Lourenço
+                                                                Mendes</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Developers vs AI :: How to do Secure Code?
+                                                            </span>
+                                                            <span>Fabio Gomes Rocha</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16:30 às 17:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Ransomware ninguém segura esse bebê
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                levado
+                                                            </span>
+                                                            <span class="d-block">Zoziel Pinto Freire</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                DevSecOps na Prática: Construindo uma esteira
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                com ferramentas Open Source
+                                                            </span>
+                                                            <span class="d-block">Helena Carreço e Thiago
+                                                                Grisolfi</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Stack de Machine Learning (ML)
+                                                            </span>
+                                                            <span class="d-block">Messias Gomes da Silva</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17:30 às 18:00</td>
+                                                        <td colspan="4">
+                                                            <span class="d-block dark_horario">
+                                                                Encerramento
+                                                            </span>
+                                                            <span class="d-block">
+                                                                Divulgação do resultado e premiação do CTF
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-content-horario">
+                                <div class="inner">
+                                    <div class="info">
+                                        <div class="title" id="palestra">
+                                            <h2>Programação - 2023</h2>
+                                        </div>
+
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-striped table-horario p-3 table-bordered">
+                                                <thead class="table-color-header-horario">
+                                                    <tr>
+                                                        <th scope="col">Horario</th>
+                                                        <th scope="col">Trilha PADAWAN</th>
+                                                        <th scope="col">Trilha JEDI</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">08:30</td>
+                                                        <td colspan="2">
+                                                            <span class="d-block dark_horario">Credenciamento</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">09:30 às 10:00</td>
+                                                        <td colspan="2"><span
+                                                                class="d-block dark_horario">Abertura</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">10:00 às 11:00</td>
+                                                        <td colspan="2">
+                                                            <span class="d-block dark_horario">Berço não define
+                                                                trajetória</span>
+                                                            <span class="d-block">Dilson Caproni</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">11:00 às 12:00</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">Teste de penetração e a
+                                                                LGPD
+                                                                - como ponderar?</span>
+                                                            <span class="d-block">Fernanda Modolo Vieira Machado</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">A vida real de um exploit
+                                                                coder</span>
+                                                            <span class="d-block">Mateus Lino</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12:00 às 13:30</td>
+                                                        <td colspan="2">
+                                                            <span>Almoço</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13:30 às 14:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Desafios de Segurança e Privacidade no Desenvolvimento
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                de Software Contemporâneo
+                                                            </span>
+                                                            <span class="d-block">Otávio Lube dos Santos</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                AppSec - Muito além dos testes automatizados
+                                                            </span>
+                                                            <span class="d-block">Paschoal Luiz Brioschi Diniz</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14:30 às 15:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Introdução à exploração de vulnerabilidades em API's
+                                                            </span>
+                                                            <span class="d-block">Helena Carreço</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Hunting and Prevent ADCS Attacks
+                                                            </span>
+                                                            <span class="d-block">Fabricio Gimenes Porto</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15:30 às 16:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Planejamento e produção de um plano de resposta a
+                                                            </span>
+                                                            <span class="d-block dark_horario">
+                                                                incidentes, criação de processos, documentações e anexos
+                                                            </span>
+                                                            <span class="d-block">João Victor Cardoso Baptista</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Automatizando o Recon com ferramentas Open Source
+                                                            </span>
+                                                            <span class="d-block">Gabriel Tetzlaff</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16:30 às 17:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Usando frameworks para controles na Cibersegurança
+                                                            </span>
+                                                            <span class="d-block">Felipe Pinto Gomes</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Lockbit e suas malandragens
+                                                            </span>
+                                                            <span class="d-block">Zoziel Pinto Freire</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17:30 às 18:00</td>
+                                                        <td colspan="2">
+                                                            <span class="d-block dark_horario">
+                                                                Encerramento
+                                                            </span>
+                                                            <span class="d-block">Divulgação do resultado e premiação do
+                                                                CTF</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-content-horario">
+                                <div class="inner">
+                                    <div class="info">
+                                        <div class="title" id="palestra">
+                                            <h2>Programação - 2022</h2>
+                                        </div>
+
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-striped table-horario p-3 table-bordered">
+                                                <thead class="table-color-header-horario">
+                                                    <tr>
+                                                        <th scope="col">Horario</th>
+                                                        <th scope="col">Trilha PADAWAN</th>
+                                                        <th scope="col">Trilha JEDI</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">08:30</td>
+                                                        <td colspan="2">
+                                                            <span class="d-block dark_horario">Credenciamento</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">09:30 às 10:00</td>
+                                                        <td colspan="2"><span
+                                                                class="d-block dark_horario">Abertura</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">10:00 às 11:00</td>
+                                                        <td colspan="2">
+                                                            <span class="d-block dark_horario">Guia de sobrevivência do
+                                                                CISO
+                                                                das galáxias</span>
+                                                            <span class="d-block">Anchises Moraes</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">11:00 às 12:00</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">Carreira em TI: Seja
+                                                                Profissional. O Profissional!</span>
+                                                            <span class="d-block">Felipe Pinto Gomes</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">Introdução a hooking de
+                                                                APIs
+                                                                em Windows</span>
+                                                            <span class="d-block">Leonardo Medeiros</span>
+                                                        </td>
+                                                        <td rowspan="5" class="align-middle">
+                                                            <span class="d-block">CTF</span>
+                                                            <span class="d-block"> (Laboratorio)</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12:00 às 13:30</td>
+                                                        <td colspan="2">
+                                                            <span>Almoço</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13:30 às 14:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Você é um iniciante no Pentest? O que fazer?
+                                                            </span>
+                                                            <span class="d-block">
+                                                                Filipe Cordeiro
+                                                            </span>
+                                                            <!-- <span class="d-block">Otávio Lube dos Santos</span> -->
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Voltage Fault Injection e Clock Glitching na prática
+                                                            </span>
+                                                            <span class="d-block">Lucas Teske</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14:30 às 15:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Modelagem de Ameaças aplicada a Segurança
+                                                            </span>
+                                                            <span class="d-block">Ofensiva</span>
+                                                            <span class="d-block">Wagner Elias</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Hunting and Prevent ADCS Attacks
+                                                            </span>
+                                                            <span class="d-block">Fabricio Gimenes Porto</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15:30 às 16:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Aventuras com NodeMCU
+                                                            </span>
+                                                            <span class="d-block">
+                                                                Rafael Zanol
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Forense Como Resposta a Incidentes
+                                                            </span>
+                                                            <span class="d-block">Daniel Fidelis</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16:30 às 17:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                O Papel do SIEM na Segurança da Informação
+                                                            </span>
+                                                            <span class="d-block">Marcos Vieira dos Santos</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Blindando Servers e Containers com OpenSCAP +
+                                                            </span>
+                                                            <span class="d-block">Ansible</span>
+                                                            <span class="d-block">Paschoal Diniz</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17:30 às 18:00</td>
+                                                        <td colspan="2">
+                                                            <span class="d-block dark_horario">
+                                                                Encerramento
+                                                            </span>
+                                                            <span class="d-block">Divulgação do resultado e premiação do
+                                                                CTF</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-content-horario">
+                                <div class="inner">
+                                    <div class="info">
+                                        <div class="title" id="palestra">
+                                            <h2>Programação - 2019</h2>
+                                        </div>
+
+                                        <div class="table-responsive-sm">
+                                            <table
+                                                class="table table-striped table-horario p-3 table-bordered table-programacao">
+                                                <thead class="table-color-header-horario">
+                                                    <tr>
+                                                        <th scope="col">Horario</th>
+                                                        <th scope="col">Sala 8</th>
+                                                        <th scope="col">Trilha PADAWAN</th>
+                                                        <th scope="col">Trilha JEDI</th>
+                                                        <th scope="col">Laboratório 1</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">08:30</td>
+                                                        <td colspan="2">
+                                                            <span class="d-block dark_horario">Credenciamento</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">09:00 às 10:00</td>
+                                                        <td rowspan="9" class="align-middle">
+                                                            <span>Campeonato de Robótica</span>
+                                                        </td>
+                                                        <td rowspan="3"></td>
+                                                        <td>
+                                                            <span class="d-block dark_horario"> Pentest: Realizando
+                                                                ataque
+                                                                em ambiente</span>
+                                                            <span class="d-block"> Interno Windows</span>
+                                                            <span class="d-block">Patrick Petronettoa</span>
+                                                        </td>
+                                                        <td rowspan="3" class="align-middle">
+                                                            <span class="d-block dark_horario">
+                                                                Workshop Monte sua Antena Wifi
+                                                            </span>
+                                                            <span class="d-block ">Giovanni Zanol</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">10:00 às 11:00</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">Web Application Firewall
+                                                                Open
+                                                                Source Proteja suas aplicações com NGINX e MODSECURITY
+                                                                3.0</span>
+                                                            <span class="d-block">Carlos Renato Vilasboas</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">11:00 às 12:00</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">Blockchain: o que você
+                                                                precisa saber sobre isso?</span>
+                                                            <span class="d-block">Gustavo Gobi Martinelli</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12:00 às 13:00</td>
+                                                        <td colspan="3">
+                                                            <span>Almoço</span>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13:00 às 13:30</td>
+                                                        <td colspan="3">
+                                                            <span>Abertura</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13:30 às 14:30</td>
+                                                        <td>
+                                                            <span class="d-block">Segurança não é papel técnico</span>
+                                                            <span class="d-block">Felipe Pinto Gomes</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block">Implementando Segurança na Nuvem
+                                                                AWS</span>
+                                                            <span class="d-block">Deivid Biti Padilha</span>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14:30 às 15:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                O que tem feito com as suas Soft Skills no mundo da
+                                                                tecnologia?
+                                                            </span>
+                                                            <span class="d-block">
+                                                                Lourival Cristofoletti
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                Teste de volumetria em aplicações - D.O.S consciente em
+                                                                ambiente escalável
+                                                            </span>
+                                                            <span class="d-block">Andre Vidal</span>
+                                                        </td>
+                                                        <td rowspan="3" class="align-middle">
+                                                            <span class="d-blocK">
+                                                                Workshop Engenharia Reversa de Software
+                                                            </span>
+                                                            <span class="d-blocK">Maycon Vitali</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15:30 às 16:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                DEF CON Group - De Las Vegas para Vitória
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                WordPress Security
+                                                            </span>
+                                                            <span class="d-block">Fernando Barbosa Neto</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16:30 às 17:30</td>
+                                                        <td>
+                                                            <span class="d-block dark_horario">
+                                                                LGPD - MARCO CIVIL e CIBERCRIMES
+                                                            </span>
+                                                            <span class="d-block">Patrick Luiz dos Santos</span>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17:30 às 18:00</td>
+                                                        <td colspan="4">
+                                                            <span class="d-block dark_horario">
+                                                                Encerramento
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container_navigation table">
+                            <div class="navigation-slide-prev-table"></div>
+                            <div class="navigation-slide-next-table"></div>
+                        </div>
+                    </div>
+            </div>
+    </section>
+    </div>
+    </div>
+
+    </section>
+
+
+    <section class="palestra" style="display: none;">
+        <div class="container_palestra">
+            <div class="box_palestrar">
+
+                <div class="info">
+                    <div class="title" id="palestra">
+                        <h2>Palestrantes e Voluntários</h2>
+                    </div>
+                    <p class="content_section">A <strong>BSIdes Vitória 2024</strong> vem aí e precisa da sua
+                        participação. Se você tem uma palestra, Workshop legal para apresentar ou mesmo se quer
+                        ajudar
+                        como voluntário preencha o formulário. </p>
+                    <!-- <div class="btn_palestra">
+                        <div class="button_banner">
+                            <a href="https://docs.google.com/forms/d/1c-iRFRFuri4HzEQ5BbNY2-nvy0anf3K2K8Ofx9itZ5M/viewform?edit_requested=true"
+                                class="btn_banner blue" target="_blank">Palestrante de Inteligência Artificial</a>
+                        </div>
+                        <div class="button_banner">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeUIzbaRQgObEunPuRwyLVpxVGaD-0VMmnkH5dGdThj1KYLg/viewform"
+                                class="btn_banner" target="_blank">Palestrante de Cibersegurança</a>
+                        </div>
+                    </div> -->
+                    <div class="btn_palestra">
+                        <div class="button_banner">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5ebmQZtv4K7GB-hhxHK9moNElsItEM_3xhJCh92Z_dWuYbA/viewform"
+                                class="btn_banner blue" target="_blank">Quero ser um voluntário</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content img_content">
+            <div class="inner_img">
+                <div class="img"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="palestra">
+        <div class="container_palestra">
+            <div class="box_palestrar">
+
+                <div class="info">
+                    <div class="title" id="palestra">
+                        <h2>Palestras e Workshops</h2>
+                    </div>
+                    <p class="content_section">
+                        <strong> A Bsides Vitória 2025 </strong> - vem aí e precisa da sua participação. Se você tem uma palestra legal para apresentar na área de Cibersegurança ou Inteligência Artificial, esse é o momento preencha o formulário especifico.
+                    </p>
+                    <p class="content_section">
+                        <strong>Workshop</strong> São sessões interativas e práticas que têm como objetivo permitir
+                        que
+                        os participantes adquiram conhecimentos e habilidades específicas
+                        por meio de atividades práticas, discussões, exercícios e interações diretas com o instrutor
+                        ou
+                        facilitador.
+                    </p>
+                    <div class="btn_palestra">
+                        <!-- cideberk workshop e palestra IA -->
+                        <div class="button_banner">
+                            <a href="https://forms.gle/FmCQsEGBk8QwsEER8"
+                                class="btn_banner blue" target="_blank">Quero palestrar para Cibersegurança
+                            </a>
+                        </div>
+                        <div class="button_banner">
+                            <a href="https://forms.gle/73muqSKMArWfTh59A"
+                                class="btn_banner" target="_blank">Quero Realizar um Workshop/Oficina</a>
+                        </div>
+                    </div>
+
+                    <div class="btn_palestra">
+                        <div class="button_banner">
+                            <a href="https://forms.gle/tQTKrqxfSyUBovLb7"
+                                class="btn_banner blue" target="_blank">Quero palestrar para IA
+                            </a>
+                        </div>
+                        <div class="button_banner">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSegd8ydoO6veeEmn7fNn8S_oAJZOZ8pOKlr2w0U9lVVDQAv5Q/viewform?usp=sf_link"
+                                class="btn_banner" target="_blank">Quero palestrar na Village Red Team
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content img_content">
+            <div class="inner_img">
+                <div class="img"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="bg_footer01">
+            <div class="content">
+                <div class="container_parceiro">
+                    <div class="box_parceiro">
+                        <span>Apoio institucional</span>
+                        <div class="inner_img">
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                    <div class="box_parceiro">
+                        <span class="span2">Realização</span>
+                        <div class="inner_vip">
+                            <span>Patrocínio Diamante</span>
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                    <div class="box_parceiro">
+                        <div class="inner_img02">
+                            <span>Parceiro</span>
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg_footer02">
+            <div class="content">
+                <div class="container_footer">
+                    <div class="box_footer">
+                        <div class="center_footer">
+                            <ul>
+                                <!-- <li><a class="nav-link" href="#home">HOME</a></li> -->
+                                <!-- <li><a class="nav-link" href="#evento" rel="noreferrer">EVENTO</a></li> -->
+                                <!-- <li><a class="nav-link" href="#programacao" rel="noreferrer">PROGRAMAÇÃO</a></li> -->
+                                <!--    <li><a class="nav-link" href="#" rel="noreferrer">Seja um apoiador</a></li> -->
+                                <!-- <li><a class="nav-link" href="#palestra" rel="noreferrer">PALESTRANTES E
+                                        VOLUNTÁRIOS</a>
+                                </li> -->
+                                <!-- <li><a class="nav-link" href="#fotos" rel="noreferrer">FOTOS</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box_footer">
+                        <div class="center_footer">
+                            <!--                     <div class="button_banner">
+                        <a href="/" class="btn_banner blue">SEJA UM APOIADOR</a>
+                    </div> -->
+                            <div class="text">
+                                <p>
+                                    <strong>Sábado 07 de Junho de 2025</strong>
+                                    Local: EEEFM Prof. Renato Jose da Costa Pacheco
+                                    <a href="https://goo.gl/maps/A9LzhUeD2MKLmjss6" class="text_a" target="_blank">
+                                        Jardim Camburi - Vitória-ES </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_footer">
+                        <div class="center_footer">
+                            <div class="box_rede">
+                                <div class="logo01_">
+                                    <a href="/">
+                                        <div class="img"></div>
+                                    </a>
+                                </div>
+                                <div class="rede-flex">
+                                    <div class="rede">
+                                        <a href="https://www.instagram.com/bsidesvitoria/" target="_blank">
+                                            <div class="img"></div>
+                                        </a>
+                                    </div>
+                                    <div class="rede rede-whatapp">
+                                        <a href="https://chat.whatsapp.com/Jn6O67Wk3pvEao1TBA2etu" target="_blank">
+                                            <i class="fa fa-whatsapp"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_da">
+                    <span>© <span class="ano_footer" style="display: inline;"></span> – BSIDES | Privacy Policy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div>
+        <a href="https://chat.whatsapp.com/Jn6O67Wk3pvEao1TBA2etu" class="float" target="_blank">
+            <div class="img_whatsapp"></div>
+        </a>
+    </div>
+
+    <script type="text/javascript">
+    <!--
+    function displayCTF() {
+        alert("BSidesVix{Shamballa}")
+    }
+    //
+    -->
+    </script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="./lib/bootstrap4.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="./js/functions.globals.js"></script>
+    <script src="./js/appinit.js"></script>
+    <script src="./js/plugin.modal.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./slick/slick/slick.min.js"></script>
+    <script src="./js/slide.js"></script>
+    <script src="./js/script.js?version=123"></script>
+</body>
+
+</html>
